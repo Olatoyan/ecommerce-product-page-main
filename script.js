@@ -1,0 +1,13 @@
+"use strict";
+const plusBtn = document.querySelector(".icon__plus");
+const minusBtn = document.querySelector(".icon__minus");
+const submitBox = document.querySelector(".submit__box");
+const cart = document.querySelector(".cart__logo");
+const numProducts = document.querySelector(".product__number");
+const finalPrice = document.querySelector(".final__price");
+const deleteBtn = document.querySelector(".delete__icon");
+const smallImg = document.querySelectorAll(".small__img");
+const lightBox = document.querySelector(".light");
+const overlay = document.querySelector(".overlay");
+const leftBtn = document.querySelector(".btn--left");
+const rightBtn = document.querySelector(".btn--right");

@@ -104,7 +104,8 @@ body {
   position: relative;
 }
 .cart__number {
-  /* display: none; */
+  display: none;
+  /* show when a user clicks on add to cart */
   position: absolute;
   top: -1rem;
   right: -1rem;
@@ -314,8 +315,11 @@ body {
 }
 
 .cart__selection {
+  display: none;
   width: 35rem;
+  /* 
   display: flex;
+  add when clicked on cart */
   flex-direction: column;
   gap: 2rem;
   background-color: #fff;
@@ -357,9 +361,9 @@ body {
   letter-spacing: 0.3px;
 }
 .cart__price {
-  font-size: 1.2rem;
 }
 .main__price {
+  font-size: 1.2rem;
 }
 .product__number {
   font-size: 1.2rem;
@@ -410,7 +414,8 @@ body {
 
 /* LIGHTBOX */
 .light {
-  display: flex;
+  /* display: none; */
+  /* display: flex; add when clicked on the image  section */
   flex-direction: column;
   gap: 2rem;
   width: 45rem;
@@ -420,6 +425,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+  /* overflow-x: hidden; */
   /* background-color: rgba(223, 0, 0, 0.8); */
 }
 .close__icon {
@@ -435,6 +441,8 @@ body {
 
 .product--img__sliders {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .btn {
@@ -471,6 +479,7 @@ body {
 .box--2,
 .box--3,
 .box--4 {
+  /* width: 100%; */
   display: none;
 }
 
@@ -546,7 +555,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   /* backdrop-filter: blur(3px); */
 
-  display: none;
+  /* display: none; */
   /* display: block;  add this when the lightbox is clicked*/
   /* z-index: 3; */
 }
