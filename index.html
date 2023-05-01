@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__text-box">
+        <img src="images/logo.svg" alt="sneakers logo" class="header__logo" />
+        <nav class="header__nav">
+          <ul class="nav__links">
+            <li><a href="#" class="nav__link">Collections</a></li>
+            <li><a href="#" class="nav__link">Men</a></li>
+            <li><a href="#" class="nav__link">Women</a></li>
+            <li><a href="#" class="nav__link">About</a></li>
+            <li><a href="#" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="user__box">
+        <div class="cart__box">
+          <p class="cart__number">1</p>
+          <svg
+            class="cart__logo"
+            width="22"
+            height="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+              fill-rule="nonzero"
+            />
+          </svg>
+        </div>
+
+        <img src="images/image-avatar.png" alt="user image" class="user__img" />
+      </div>
+    </header>
+    <main class="main">
+      <section class="main__section">
+        <div class="img__section">
+          <div class="big__img-box">
+            <img
+              src="images/image-product-1.jpg"
+              alt="image product 1"
+              class="big__img"
+            />
+          </div>
+          <div class="small__img-box">
+            <div class="img__box">
+              <div class="small__img-wrapper small__img-active">
+                <img
+                  src="images/image-product-1-thumbnail.jpg"
+                  alt="image-product-1-thumbnail"
+                  class="small__img"
+                />
+              </div>
+              <div class="overlay"></div>
+            </div>
+
+            <div class="img__box">
+              <div class="small__img-wrapper">
+                <img
+                  src="images/image-product-2-thumbnail.jpg"
+                  alt="image-product-2-thumbnail"
+                  class="small__img"
+                />
+              </div>
+              <div class="overlay"></div>
+            </div>
+
+            <div class="img__box">
+              <div class="small__img-wrapper">
+                <img
+                  src="images/image-product-3-thumbnail.jpg"
+                  alt="image-product-3-thumbnail"
+                  class="small__img"
+                />
+              </div>
+              <div class="overlay"></div>
+            </div>
+
+            <div class="img__box">
+              <div class="small__img-wrapper">
+                <img
+                  src="images/image-product-4-thumbnail.jpg"
+                  alt="image-product-4-thumbnail"
+                  class="small__img"
+                />
+              </div>
+              <div class="overlay"></div>
+            </div>
+          </div>
+
+          <!-- <div class="small__img-box">
+            <div class="img__box">
+              <img
+                src="images/image-product-1-thumbnail.jpg"
+                alt="image-product-1-thumbnail"
+                class="small__img small__img-active"
+              />
+              <div class="overlay"></div>
+            </div>
+
+            <div class="img__box">
+              <img
+                src="images/image-product-2-thumbnail.jpg"
+                alt="image-product-2-thumbnail"
+                class="small__img"
+              />
+              <div class="overlay"></div>
+            </div>
+
+            <div class="img__box">
+              <img
+                src="images/image-product-3-thumbnail.jpg"
+                alt="image-product-3-thumbnail"
+                class="small__img"
+              />
+              <div class="overlay"></div>
+            </div>
+
+            <div class="img__box">
+              <img
+                src="images/image-product-4-thumbnail.jpg"
+                alt="image-product-4-thumbnail"
+                class="small__img"
+              />
+              <div class="overlay"></div>
+            </div>
+          </div> -->
+        </div>
+        <div class="text__section">
+          <div class="heading__box">
+            <h2 class="secondary__heading">Sneaker Company</h2>
+            <h1 class="primary__heading">Fall Limited Edition Sneakers</h1>
+          </div>
+          <div class="text__box">
+            <p class="heading__text">
+              These low-profile sneakers are your perfect casual wear companion.
+              Featuring a durable rubber outer sole, they’ll withstand
+              everything the weather can offer.
+            </p>
+            <div class="price__box">
+              <div class="discount__box">
+                <p class="discount__price">$125.00</p>
+                <p class="discount__percentage">50%</p>
+              </div>
+              <p class="slashed__price">$250.00</p>
+            </div>
+          </div>
+          <div class="cart__box">
+            <div class="cart__amount-box">
+              <div class="icon__box">
+                <svg
+                  class="icon icon__minus"
+                  width="12"
+                  height="4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <defs>
+                    <path
+                      d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z"
+                      id="a"
+                    />
+                  </defs>
+                  <use fill-rule="nonzero" xlink:href="#a" />
+                </svg>
+              </div>
+
+              <p class="cart__amount-number">0</p>
+              <div class="icon__box">
+                <svg
+                  class="icon icon__plus"
+                  width="12"
+                  height="12"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <defs>
+                    <path
+                      d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z"
+                      id="b"
+                    />
+                  </defs>
+                  <use fill-rule="nonzero" xlink:href="#b" />
+                </svg>
+              </div>
+            </div>
+            <div class="submit__box">
+              <img
+                src="images/submit-cart.svg"
+                alt="submit__icon"
+                class="submit__icon"
+              />
+              <p class="submit__text">Add to cart</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="cart__selection cart__selection-full">
+      <h3 class="cart__selection-heading">Cart</h3>
+      <div class="cart__selection-box">
+        <div class="box__details">
+          <img
+            src="images/image-product-1-thumbnail.jpg"
+            alt="cart image"
+            class="box__img"
+          />
+          <div class="box__text-details">
+            <p class="text__heading">Fall Limited Edition Sneakers</p>
+            <p class="cart__price">
+              <span class="main__price">$125.00</span> x
+              <span class="product__number">1</span>
+              <span class="final__price">$125.00</span>
+            </p>
+          </div>
+          <img
+            src="images/icon-delete.svg"
+            alt="delete icon"
+            class="delete__icon"
+          />
+        </div>
+        <button class="checkout">Checkout</button>
+      </div>
+    </div>
+    <div class="cart__selection cart__selection-empty">
+      <h3 class="cart__selection-heading">Cart</h3>
+      <div class="cart__selection-empty-box">
+        <p class="empty__text">Your cart is empty.</p>
+      </div>
+    </div>
+
+    <!-- <div class="lightbox">
+      <div class="lightbox--big__img-box">
+        <img
+          src="images/image-product-1.jpg"
+          alt="image product 1"
+          class="lightbox--big__img"
+        />
+      </div>
+      <div class="lightbox--small__img-box">
+        <div class="lightbox--img__box">
+          <div class="lightbox--small__img-wrapper lightbox--small__img-active">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              alt="image-product-1-thumbnail"
+              class="lightbox--small__img"
+            />
+          </div>
+          <div class="lightbox--overlay"></div>
+        </div>
+
+        <div class="lightbox--img__box">
+          <div class="lightbox--small__img-wrapper">
+            <img
+              src="images/image-product-2-thumbnail.jpg"
+              alt="image-product-2-thumbnail"
+              class="lightbox--small__img"
+            />
+          </div>
+          <div class="lightbox--overlay"></div>
+        </div>
+
+        <div class="lightbox--img__box">
+          <div class="lightbox--small__img-wrapper">
+            <img
+              src="images/image-product-3-thumbnail.jpg"
+              alt="image-product-3-thumbnail"
+              class="lightbox--small__img"
+            />
+          </div>
+          <div class="lightbox--overlay"></div>
+        </div>
+
+        <div class="lightbox--img__box">
+          <div class="lightbox--small__img-wrapper">
+            <img
+              src="images/image-product-4-thumbnail.jpg"
+              alt="image-product-4-thumbnail"
+              class="lightbox--small__img"
+            />
+          </div>
+          <div class="lightbox--overlay"></div>
+        </div>
+      </div>
+    </div> -->
+    <div class="light">
+      <svg
+        class="close__icon"
+        width="14"
+        height="15"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+          fill-rule="evenodd"
+        />
+      </svg>
+      <div class="product--img__sliders">
+        <div class="box box--1">
+          <div class="product__box product__box--1">
+            <img
+              src="images/image-product-1.jpg"
+              alt="anisha image"
+              class="product__img"
+            />
+          </div>
+        </div>
+
+        <div class="box box--2">
+          <div class="product__box product__box--2">
+            <img
+              src="images/image-product-2.jpg"
+              alt="anisha image"
+              class="product__img"
+            />
+          </div>
+        </div>
+
+        <div class="box box--3">
+          <div class="product__box product__box--3">
+            <img
+              src="images/image-product-3.jpg"
+              alt="anisha image"
+              class="product__img"
+            />
+          </div>
+        </div>
+
+        <div class="box box--4">
+          <div class="product__box product__box--4">
+            <img
+              src="images/image-product-4.jpg"
+              alt="anisha image"
+              class="product__img"
+            />
+          </div>
+        </div>
+        <img
+          src="images/icon-previous.svg"
+          alt="previous icon"
+          class="btn btn--left"
+        />
+        <img
+          src="images/icon-next.svg"
+          alt="next icon"
+          class="btn btn--right"
+        />
+      </div>
+      <div class="light__small-box">
+        <div class="light__img__box">
+          <div class="light__small__img-wrapper light__small__img-active">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              alt="image-product-1-thumbnail"
+              class="light__small__img"
+            />
+          </div>
+          <div class="light__overlay"></div>
+        </div>
+
+        <div class="light__img__box">
+          <div class="light__small__img-wrapper">
+            <img
+              src="images/image-product-2-thumbnail.jpg"
+              alt="image-product-2-thumbnail"
+              class="light__small__img"
+            />
+          </div>
+          <div class="light__overlay"></div>
+        </div>
+
+        <div class="light__img__box">
+          <div class="light__small__img-wrapper">
+            <img
+              src="images/image-product-3-thumbnail.jpg"
+              alt="image-product-3-thumbnail"
+              class="light__small__img"
+            />
+          </div>
+          <div class="light__overlay"></div>
+        </div>
+
+        <div class="light__img__box">
+          <div class="light__small__img-wrapper">
+            <img
+              src="images/image-product-4-thumbnail.jpg"
+              alt="image-product-4-thumbnail"
+              class="light__small__img"
+            />
+          </div>
+          <div class="light__overlay"></div>
+        </div>
+      </div>
+    </div>
+    <div class="box__overlay"></div>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
