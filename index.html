@@ -35,7 +35,7 @@
       </div>
       <div class="user__box">
         <div class="cart__box">
-          <p class="cart__number">1</p>
+          <p class="cart__number">0</p>
           <svg
             class="cart__logo"
             width="22"
@@ -107,44 +107,6 @@
               <div class="overlay"></div>
             </div>
           </div>
-
-          <!-- <div class="small__img-box">
-            <div class="img__box">
-              <img
-                src="images/image-product-1-thumbnail.jpg"
-                alt="image-product-1-thumbnail"
-                class="small__img small__img-active"
-              />
-              <div class="overlay"></div>
-            </div>
-
-            <div class="img__box">
-              <img
-                src="images/image-product-2-thumbnail.jpg"
-                alt="image-product-2-thumbnail"
-                class="small__img"
-              />
-              <div class="overlay"></div>
-            </div>
-
-            <div class="img__box">
-              <img
-                src="images/image-product-3-thumbnail.jpg"
-                alt="image-product-3-thumbnail"
-                class="small__img"
-              />
-              <div class="overlay"></div>
-            </div>
-
-            <div class="img__box">
-              <img
-                src="images/image-product-4-thumbnail.jpg"
-                alt="image-product-4-thumbnail"
-                class="small__img"
-              />
-              <div class="overlay"></div>
-            </div>
-          </div> -->
         </div>
         <div class="text__section">
           <div class="heading__box">
@@ -228,11 +190,18 @@
           />
           <div class="box__text-details">
             <p class="text__heading">Fall Limited Edition Sneakers</p>
-            <p class="cart__price">
-              <span class="main__price">$125.00</span> x
-              <span class="product__number">1</span>
-              <span class="final__price">$125.00</span>
-            </p>
+            <div class="cart__price">
+              <div class="cart__container">
+                <p class="main__price">
+                  $<span class="main__price-number">125.00</span>
+                </p>
+                x
+                <p class="product__number">1</p>
+              </div>
+              <p class="final__price">
+                $<span class="final__price-number">125.00</span>
+              </p>
+            </div>
           </div>
           <img
             src="images/icon-delete.svg"
@@ -250,60 +219,6 @@
       </div>
     </div>
 
-    <!-- <div class="lightbox">
-      <div class="lightbox--big__img-box">
-        <img
-          src="images/image-product-1.jpg"
-          alt="image product 1"
-          class="lightbox--big__img"
-        />
-      </div>
-      <div class="lightbox--small__img-box">
-        <div class="lightbox--img__box">
-          <div class="lightbox--small__img-wrapper lightbox--small__img-active">
-            <img
-              src="images/image-product-1-thumbnail.jpg"
-              alt="image-product-1-thumbnail"
-              class="lightbox--small__img"
-            />
-          </div>
-          <div class="lightbox--overlay"></div>
-        </div>
-
-        <div class="lightbox--img__box">
-          <div class="lightbox--small__img-wrapper">
-            <img
-              src="images/image-product-2-thumbnail.jpg"
-              alt="image-product-2-thumbnail"
-              class="lightbox--small__img"
-            />
-          </div>
-          <div class="lightbox--overlay"></div>
-        </div>
-
-        <div class="lightbox--img__box">
-          <div class="lightbox--small__img-wrapper">
-            <img
-              src="images/image-product-3-thumbnail.jpg"
-              alt="image-product-3-thumbnail"
-              class="lightbox--small__img"
-            />
-          </div>
-          <div class="lightbox--overlay"></div>
-        </div>
-
-        <div class="lightbox--img__box">
-          <div class="lightbox--small__img-wrapper">
-            <img
-              src="images/image-product-4-thumbnail.jpg"
-              alt="image-product-4-thumbnail"
-              class="lightbox--small__img"
-            />
-          </div>
-          <div class="lightbox--overlay"></div>
-        </div>
-      </div>
-    </div> -->
     <div class="light">
       <svg
         class="close__icon"
@@ -317,45 +232,48 @@
         />
       </svg>
       <div class="product--img__sliders">
-        <div class="box box--1">
-          <div class="product__box product__box--1">
-            <img
-              src="images/image-product-1.jpg"
-              alt="anisha image"
-              class="product__img"
-            />
+        <div class="boxes">
+          <div class="box box--1">
+            <div class="product__box product__box--1">
+              <img
+                src="images/image-product-1.jpg"
+                alt="anisha image"
+                class="product__img"
+              />
+            </div>
+          </div>
+
+          <div class="box box--2">
+            <div class="product__box product__box--2">
+              <img
+                src="images/image-product-2.jpg"
+                alt="anisha image"
+                class="product__img"
+              />
+            </div>
+          </div>
+
+          <div class="box box--3">
+            <div class="product__box product__box--3">
+              <img
+                src="images/image-product-3.jpg"
+                alt="anisha image"
+                class="product__img"
+              />
+            </div>
+          </div>
+
+          <div class="box box--4">
+            <div class="product__box product__box--4">
+              <img
+                src="images/image-product-4.jpg"
+                alt="anisha image"
+                class="product__img"
+              />
+            </div>
           </div>
         </div>
 
-        <div class="box box--2">
-          <div class="product__box product__box--2">
-            <img
-              src="images/image-product-2.jpg"
-              alt="anisha image"
-              class="product__img"
-            />
-          </div>
-        </div>
-
-        <div class="box box--3">
-          <div class="product__box product__box--3">
-            <img
-              src="images/image-product-3.jpg"
-              alt="anisha image"
-              class="product__img"
-            />
-          </div>
-        </div>
-
-        <div class="box box--4">
-          <div class="product__box product__box--4">
-            <img
-              src="images/image-product-4.jpg"
-              alt="anisha image"
-              class="product__img"
-            />
-          </div>
-        </div>
         <img
           src="images/icon-previous.svg"
           alt="previous icon"
@@ -369,14 +287,14 @@
       </div>
       <div class="light__small-box">
         <div class="light__img__box">
-          <div class="light__small__img-wrapper light__small__img-active">
+          <div class="light__small__img-wrapper">
             <img
               src="images/image-product-1-thumbnail.jpg"
               alt="image-product-1-thumbnail"
               class="light__small__img"
             />
           </div>
-          <div class="light__overlay"></div>
+          <div class="light__overlay" data-img="0"></div>
         </div>
 
         <div class="light__img__box">
@@ -387,7 +305,7 @@
               class="light__small__img"
             />
           </div>
-          <div class="light__overlay"></div>
+          <div class="light__overlay" data-img="1"></div>
         </div>
 
         <div class="light__img__box">
@@ -398,7 +316,7 @@
               class="light__small__img"
             />
           </div>
-          <div class="light__overlay"></div>
+          <div class="light__overlay" data-img="2"></div>
         </div>
 
         <div class="light__img__box">
@@ -409,7 +327,7 @@
               class="light__small__img"
             />
           </div>
-          <div class="light__overlay"></div>
+          <div class="light__overlay" data-img="3"></div>
         </div>
       </div>
     </div>
