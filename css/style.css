@@ -139,9 +139,12 @@ body {
 .img__section {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
 }
 .big__img-box {
+  display: flex;
+  justify-content: center;
 }
 
 .big__img {
@@ -151,6 +154,7 @@ body {
 
 .small__img-box {
   display: flex;
+  justify-content: center;
   gap: 2rem;
   background-color: transparent;
 }
@@ -448,15 +452,7 @@ body {
 }
 
 .product--img__sliders {
-  /* max-width: 100rem; */
-  /* height: 30rem; */
-  /* margin: 0 auto; */
   height: 45.2rem;
-
-  /* IN THE END */
-  /* overflow: hidden; */
-  /* display: flex;
-  align-items: center; */
 }
 
 .btn {
