@@ -186,6 +186,7 @@ body {
 .big__img {
   width: 75%;
   border-radius: 1.5rem;
+  transition: all 3s;
 }
 
 .small__img-box {
@@ -449,6 +450,7 @@ body {
 
 /* LIGHTBOX */
 .light {
+  transition: all 0.3s;
   display: none;
   flex-direction: column;
   gap: 2rem;
