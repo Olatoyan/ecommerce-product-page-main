@@ -20,11 +20,35 @@ const closeIcon = document.querySelector(".close__icon");
 const overlay = document.querySelector(".box__overlay");
 const leftBtn = document.querySelector(".btn--left");
 const rightBtn = document.querySelector(".btn--right");
+const btnRight = document.querySelector(".right--btn");
+const btnLeft = document.querySelector(".left--btn");
 const lightBoxSmallImg = document.querySelectorAll(".light__img__box");
 const lightSmallBox = document.querySelector(".light__small-box");
 const productImage = document.querySelectorAll(".product__img");
 const productImgSliders = document.querySelector(".product--img__sliders");
 const productImgBox = document.querySelectorAll(".box");
+const mobileProductImgBox = document.querySelectorAll(".boxx");
+const header = document.querySelector(".header");
+const navOpen = document.querySelector(".nav-open");
+const openBtn = document.querySelector(".open-icon");
+const closeBtn = document.querySelector(".close-icon");
+const navLinks = document.querySelectorAll(".nav__link");
+const headerOverlay = document.querySelector(".header__overlay");
+
+const closeOverlay = function () {
+  header.classList.remove("nav-open");
+};
+
+openBtn.addEventListener("click", function () {
+  header.classList.add("nav-open");
+});
+
+navLinks.forEach((navLink) => {
+  navLink.addEventListener("click", closeOverlay);
+});
+
+closeBtn.addEventListener("click", closeOverlay);
+headerOverlay.addEventListener("click", closeOverlay);
 
 plusBtn.addEventListener("click", function () {
   cartNumber.textContent++;
@@ -127,12 +151,6 @@ const prevSlide = function () {
   goToSlide(curSlide);
 };
 
-// document.querySelector("body").addEventListener("click", function (e) {
-//   if (lightBox.style.display === "flex" && e.target !== lightBox) {
-//     lightBox.style.display = "none";
-//   }
-// });
-
 rightBtn.addEventListener("click", nextSlide);
 leftBtn.addEventListener("click", prevSlide);
 document.addEventListener("keydown", function (e) {
@@ -147,6 +165,41 @@ lightSmallBox.addEventListener("click", function (e) {
     goToSlide(img);
     // e.tar
   }
+});
+
+const goToSlide2 = function (slider) {
+  mobileProductImgBox.forEach(
+    (slides, i) =>
+      (slides.style.transform = `translateX(${100 * (i - slider)}%)`)
+  );
+};
+goToSlide2(0);
+let curSlide2 = 0;
+const maxSlide2 = mobileProductImgBox.length;
+
+const nextSlide2 = function () {
+  if (curSlide2 === maxSlide2 - 1) {
+    curSlide2 = 0;
+  } else {
+    curSlide2++;
+  }
+  goToSlide2(curSlide2);
+};
+
+const prevSlide2 = function () {
+  if (curSlide2 === 0) {
+    curSlide2 = maxSlide2 - 1;
+  } else {
+    curSlide2--;
+  }
+  goToSlide2(curSlide2);
+};
+
+btnRight.addEventListener("click", nextSlide2);
+btnLeft.addEventListener("click", prevSlide2);
+document.addEventListener("keydown", function (e) {
+  if (e.key === "ArrowLeft") prevSlide2();
+  if (e.key === "ArrowRight") nextSlide2();
 });
 const closeLightBox = function () {
   lightBox.style.display = "none";

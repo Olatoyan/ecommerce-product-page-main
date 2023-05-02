@@ -22,9 +22,21 @@
   </head>
   <body>
     <header class="header">
+      <button class="mobile__nav">
+        <img
+          src="images/icon-menu.svg"
+          alt="open-icon"
+          class="mobile__icon open-icon"
+        />
+        <img
+          src="images/icon-close.svg"
+          alt="close-icon"
+          class="mobile__icon close-icon"
+        />
+      </button>
       <div class="header__text-box">
         <img src="images/logo.svg" alt="sneakers logo" class="header__logo" />
-        <nav class="header__nav">
+        <nav class="main__nav">
           <ul class="nav__links">
             <li><a href="#" class="nav__link">Collections</a></li>
             <li><a href="#" class="nav__link">Men</a></li>
@@ -52,9 +64,64 @@
 
         <img src="images/image-avatar.png" alt="user image" class="user__img" />
       </div>
+      <div class="header__overlay"></div>
     </header>
     <main class="main">
       <section class="main__section">
+        <div class="section-product--img__sliders">
+          <div class="boxes">
+            <div class="boxx box--1">
+              <div class="product__box product__box--1">
+                <img
+                  src="images/image-product-1.jpg"
+                  alt="anisha image"
+                  class="product__img"
+                />
+              </div>
+            </div>
+
+            <div class="boxx box--2">
+              <div class="product__box product__box--2">
+                <img
+                  src="images/image-product-2.jpg"
+                  alt="anisha image"
+                  class="product__img"
+                />
+              </div>
+            </div>
+
+            <div class="boxx box--3">
+              <div class="product__box product__box--3">
+                <img
+                  src="images/image-product-3.jpg"
+                  alt="anisha image"
+                  class="product__img"
+                />
+              </div>
+            </div>
+
+            <div class="boxx box--4">
+              <div class="product__box product__box--4">
+                <img
+                  src="images/image-product-4.jpg"
+                  alt="anisha image"
+                  class="product__img"
+                />
+              </div>
+            </div>
+          </div>
+
+          <img
+            src="images/icon-previous.svg"
+            alt="previous icon"
+            class="btn left--btn"
+          />
+          <img
+            src="images/icon-next.svg"
+            alt="next icon"
+            class="btn right--btn"
+          />
+        </div>
         <div class="img__section">
           <div class="big__img-box">
             <img
