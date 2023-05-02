@@ -70,32 +70,25 @@ submitBox.addEventListener("click", function (e) {
     numProductsChosen.style.display = "block";
   } else if (cartNumber.textContent < 1) {
     numProductsChosen.textContent = cartNumber.textContent;
-    // numProductsChosen.style.display = "block";
+    numProductsChosen.style.display = "none";
   }
 });
 
-cart.addEventListener("click", function () {
-  if (Number(numProducts.textContent) > 0) {
+cart.addEventListener("click", function (e) {
+  if (Number(cartNumber.textContent) === 0) {
+    fullCart.style.display = "none";
+    emptyCart.style.display = "block";
+    numProductsChosen.style.display = "none";
+  } else if (Number(numProducts.textContent) > 0) {
     fullCart.style.display = "flex";
     numProducts.textContent = Number(numProductsChosen.textContent);
     finalPrice.textContent = (
       Number(mainPrice.textContent) * Number(numProducts.textContent)
     ).toFixed(2);
   }
-
-  if (Number(cartNumber.textContent) === 0) {
-    fullCart.style.display = "none";
-    emptyCart.style.display = "block";
-  }
 });
-
-document.querySelector("body").addEventListener("click", function (e) {
-  if (
-    (fullCart.style.display === "flex" ||
-      emptyCart.style.display === "block") &&
-    e.target !== cart &&
-    !cartSelection.contains(e.target)
-  ) {
+document.addEventListener("click", function (e) {
+  if (!cart.contains(e.target) && e.target !== cart) {
     fullCart.style.display = "none";
     emptyCart.style.display = "none";
   }

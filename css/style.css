@@ -239,10 +239,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-color: #ff0000 !important; */
   background-color: #ffffff86;
   opacity: 1;
-  /* transition: opacity 0.3s; */
   border-radius: 1.5rem;
 }
 .text__section {
@@ -299,7 +297,6 @@ body {
 .slashed__price {
   font-size: 1.4rem;
   color: #68707d;
-  /* font-weight: 300; */
   text-decoration: line-through;
 }
 .cart__box {
@@ -325,10 +322,7 @@ body {
 .icon:hover {
   fill: #ff7d1a8a;
 }
-.icon__minus {
-}
-.icon__plus {
-}
+
 .cart__amount-number {
   padding: 1.5rem;
 }
@@ -358,9 +352,6 @@ body {
 .cart__selection {
   display: none;
   width: 35rem;
-  /* 
-  display: flex;
-  add when clicked on cart */
   flex-direction: column;
   gap: 2rem;
   background-color: #fff;
@@ -439,11 +430,6 @@ body {
   background-color: #ff7d1a8a;
 }
 
-.cart__selection-full {
-  /* display: none; */
-  /* height: 22.6rem; */
-}
-
 .cart__selection-empty {
   display: none;
 
@@ -464,7 +450,6 @@ body {
 /* LIGHTBOX */
 .light {
   display: none;
-  /* display: flex; add when clicked on the image  section */
   flex-direction: column;
   gap: 2rem;
   width: 45rem;
@@ -474,7 +459,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  /* background-color: rgba(223, 0, 0, 0.8); */
 }
 .close__icon {
   align-self: flex-end;
@@ -496,7 +480,6 @@ body {
   background-color: #fff;
   padding: 1.5rem 1.8rem;
   border-radius: 50%;
-  /* box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3); */
   transform: translate(0, -50%);
   cursor: pointer;
   transition: all 0.3s;
@@ -523,19 +506,15 @@ body {
 }
 .boxes {
   position: relative;
-
   width: 100%;
   height: 45.2rem;
-
   overflow: hidden;
 }
 
 .box,
 .boxx {
   position: absolute;
-  /* top: 0; */
   width: 100%;
-  /* height: 30rem; */
 
   display: flex;
   align-items: center;
@@ -559,7 +538,6 @@ body {
 .light__img__box {
   position: relative;
   cursor: pointer;
-  /* width: 10%; */
 }
 .light__img__box:hover .light__overlay {
   opacity: 1;
@@ -601,10 +579,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-color: #ff0000 !important; */
   background-color: #ffffff86;
   opacity: 1;
-  /* transition: opacity 0.3s; */
   border-radius: 1.5rem;
 }
 
@@ -615,11 +591,8 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  /* backdrop-filter: blur(3px); */
 
   display: none;
-  /* display: block;  add this when the lightbox is clicked*/
-  /* z-index: 3; */
 }
 
 /* 
