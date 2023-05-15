@@ -35,7 +35,7 @@ Users should be able to:
 
 ![desktop design](/screenshots/Screenshot%202023-05-02%20161259.png)
 ![Empty cart](/screenshots/Screenshot%202023-05-02%20161347.png)
-![filledcart](/screenshots/Screenshot%202023-05-02%20161441.png)
+![Filled cart](/screenshots/Screenshot%202023-05-02%20161441.png)
 ![lightbox](/screenshots/Screenshot%202023-05-02%20161509.png)
 
 ### Links
