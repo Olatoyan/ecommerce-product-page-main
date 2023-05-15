@@ -54,7 +54,7 @@ Users should be able to:
 
 ## Author
 
-- Website - [Toya Ecommerce](https://toyan-ecommerce.netlify.app)
+- Website - [Toyan Ecommerce](https://toyan-ecommerce.netlify.app)
 - Frontend Mentor - [@Olatoyan](https://www.frontendmentor.io/profile/olatoyan)
 - Twitter - [@Toyan](https://www.twitter.com/_Annonnymouss_)
 
