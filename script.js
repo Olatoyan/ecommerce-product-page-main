@@ -1,4 +1,5 @@
 "use strict";
+const main = document.querySelector(".main");
 const plusBtn = document.querySelector(".icon__plus");
 const minusBtn = document.querySelector(".icon__minus");
 const cartNumber = document.querySelector(".cart__amount-number");
@@ -8,12 +9,13 @@ const numProductsChosen = document.querySelector(".cart__number");
 const numProducts = document.querySelector(".product__number");
 const mainPrice = document.querySelector(".main__price-number");
 const finalPrice = document.querySelector(".final__price-number");
-const cartSelection = document.querySelector(".cart__selection");
+const cartSelection = document.querySelectorAll(".cart__selection");
 const emptyCart = document.querySelector(".cart__selection-empty");
 const fullCart = document.querySelector(".cart__selection-full");
 const deleteBtn = document.querySelector(".delete__icon");
+const smallImgBox = document.querySelectorAll(".small__img-box");
 const smallImg = document.querySelectorAll(".small__img");
-const bigImg = document.querySelector(".big__img");
+const bigImg = document.querySelectorAll(".big__img");
 const smallImgWrapper = document.querySelectorAll(".small__img-wrapper");
 const lightBox = document.querySelector(".light");
 const closeIcon = document.querySelector(".close__icon");
@@ -23,10 +25,12 @@ const rightBtn = document.querySelector(".btn--right");
 const btnRight = document.querySelector(".right--btn");
 const btnLeft = document.querySelector(".left--btn");
 const lightBoxSmallImg = document.querySelectorAll(".light__img__box");
-const lightSmallBox = document.querySelector(".light__small-box");
+const lightSmallBox = document.querySelectorAll(".light__small-box");
+const lightSmBox = document.querySelectorAll(".light_small-box");
 const productImage = document.querySelectorAll(".product__img");
 const productImgSliders = document.querySelector(".product--img__sliders");
 const productImgBox = document.querySelectorAll(".box");
+const bigImgBox = document.querySelectorAll(".big__box");
 const mobileProductImgBox = document.querySelectorAll(".boxx");
 const header = document.querySelector(".header");
 const navOpen = document.querySelector(".nav-open");
@@ -34,7 +38,6 @@ const openBtn = document.querySelector(".open-icon");
 const closeBtn = document.querySelector(".close-icon");
 const navLinks = document.querySelectorAll(".nav__link");
 const headerOverlay = document.querySelector(".header__overlay");
-
 const closeOverlay = function () {
   header.classList.remove("nav-open");
 };
@@ -75,6 +78,8 @@ submitBox.addEventListener("click", function (e) {
 });
 
 cart.addEventListener("click", function (e) {
+  // e.stopPropagation();
+
   if (Number(cartNumber.textContent) === 0) {
     fullCart.style.display = "none";
     emptyCart.style.display = "block";
@@ -87,12 +92,30 @@ cart.addEventListener("click", function (e) {
     ).toFixed(2);
   }
 });
-document.addEventListener("click", function (e) {
-  if (!cart.contains(e.target) && e.target !== cart) {
+
+const closeCart = function (e) {
+  if (
+    !e.target.closest(".cart__selection") &&
+    !e.target.closest(".cart__logo")
+  ) {
     fullCart.style.display = "none";
     emptyCart.style.display = "none";
   }
-});
+};
+document.addEventListener("click", closeCart);
+
+// cartSelection.forEach((cart) => cart.addEventListener("click", closeCart));
+// document.addEventListener("click", function (e) {
+//   e.stopPropagation();
+//   if (
+//     !cart.contains(e.target) &&
+//     e.target !== cart &&
+//     !cart.contains(e.target.parentNode)
+//   ) {
+//     fullCart.style.display = "none";
+//     emptyCart.style.display = "none";
+//   }
+// });
 
 deleteBtn.addEventListener("click", function () {
   fullCart.style.display = "none";
@@ -111,9 +134,11 @@ smallImgWrapper.forEach((wrapper) => {
   });
 });
 
-bigImg.addEventListener("click", function () {
-  overlay.style.display = "block";
-  lightBox.style.display = "flex";
+bigImg.forEach((big) => {
+  big.addEventListener("click", function () {
+    overlay.style.display = "block";
+    lightBox.style.display = "flex";
+  });
 });
 
 const goToSlide = function (slide) {
@@ -122,9 +147,20 @@ const goToSlide = function (slide) {
       (slides.style.transform = `translateX(${100 * (i - slide)}%)`)
   );
 };
+
 goToSlide(0);
 let curSlide = 0;
 const maxSlide = productImgBox.length;
+
+const goToSlide3 = function (slidee) {
+  bigImgBox.forEach(
+    (slides, i) =>
+      (slides.style.transform = `translateX(${100 * (i - slidee)}%)`)
+  );
+};
+goToSlide3(0);
+let curSlide3 = 0;
+const maxSlide3 = bigImgBox.length;
 
 const nextSlide = function () {
   if (curSlide === maxSlide - 1) {
@@ -151,13 +187,22 @@ document.addEventListener("keydown", function (e) {
   if (e.key === "ArrowRight") nextSlide();
 });
 
-lightSmallBox.addEventListener("click", function (e) {
-  // console.log(e.target);
-  if (e.target.classList.contains("light__overlay")) {
-    const { img } = e.target.dataset;
-    goToSlide(img);
-    // e.tar
-  }
+lightSmallBox.forEach((light) => {
+  light.addEventListener("click", function (e) {
+    if (e.target.classList.contains("light__overlay")) {
+      const { img } = e.target.dataset;
+      goToSlide(img);
+    }
+  });
+});
+
+lightSmBox.forEach((light) => {
+  light.addEventListener("click", function (e) {
+    if (e.target.classList.contains("light__overlay")) {
+      const { img } = e.target.dataset;
+      goToSlide3(img);
+    }
+  });
 });
 
 const goToSlide2 = function (slider) {
@@ -187,12 +232,29 @@ const prevSlide2 = function () {
   }
   goToSlide2(curSlide2);
 };
+const nextSlide3 = function () {
+  if (curSlide3 === maxSlide3 - 1) {
+    curSlide3 = 0;
+  } else {
+    curSlide3++;
+  }
+  goToSlide3(curSlide3);
+};
+
+const prevSlide3 = function () {
+  if (curSlide3 === 0) {
+    curSlide3 = maxSlide3 - 1;
+  } else {
+    curSlide3--;
+  }
+  goToSlide3(curSlide3);
+};
 
 btnRight.addEventListener("click", nextSlide2);
 btnLeft.addEventListener("click", prevSlide2);
 document.addEventListener("keydown", function (e) {
-  if (e.key === "ArrowLeft") prevSlide2();
-  if (e.key === "ArrowRight") nextSlide2();
+  if (e.key === "ArrowLeft") prevSlide2(), prevSlide3();
+  if (e.key === "ArrowRight") nextSlide2(), nextSlide3();
 });
 const closeLightBox = function () {
   lightBox.style.display = "none";

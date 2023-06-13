@@ -184,7 +184,7 @@ body {
 }
 
 .big__img {
-  width: 75%;
+  width: 100%;
   border-radius: 1.5rem;
   transition: all 3s;
 }
@@ -514,7 +514,8 @@ body {
 }
 
 .box,
-.boxx {
+.boxx,
+.big__box {
   position: absolute;
   width: 100%;
 
@@ -533,7 +534,8 @@ body {
   /* width: 30%; */
 }
 
-.light__small-box {
+.light__small-box,
+.light_small-box {
   display: flex;
   gap: 2.3rem;
 }
