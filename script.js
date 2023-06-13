@@ -25,8 +25,9 @@ const rightBtn = document.querySelector(".btn--right");
 const btnRight = document.querySelector(".right--btn");
 const btnLeft = document.querySelector(".left--btn");
 const lightBoxSmallImg = document.querySelectorAll(".light__img__box");
-const lightSmallBox = document.querySelectorAll(".light__small-box");
-const lightSmBox = document.querySelectorAll(".light_small-box");
+const lightSmallBox = document.querySelector(".light__small-box");
+const smallImages = document.querySelectorAll(".light__img__box");
+const lightSmBox = document.querySelectorAll(".light__img_box");
 const productImage = document.querySelectorAll(".product__img");
 const productImgSliders = document.querySelector(".product--img__sliders");
 const productImgBox = document.querySelectorAll(".box");
@@ -153,10 +154,9 @@ let curSlide = 0;
 const maxSlide = productImgBox.length;
 
 const goToSlide3 = function (slidee) {
-  bigImgBox.forEach(
-    (slides, i) =>
-      (slides.style.transform = `translateX(${100 * (i - slidee)}%)`)
-  );
+  bigImgBox.forEach((slides, i) => {
+    slides.style.transform = `translateX(${100 * (i - slidee)}%)`;
+  });
 };
 goToSlide3(0);
 let curSlide3 = 0;
@@ -182,24 +182,34 @@ const prevSlide = function () {
 
 rightBtn.addEventListener("click", nextSlide);
 leftBtn.addEventListener("click", prevSlide);
-document.addEventListener("keydown", function (e) {
-  if (e.key === "ArrowLeft") prevSlide();
-  if (e.key === "ArrowRight") nextSlide();
-});
 
-lightSmallBox.forEach((light) => {
-  light.addEventListener("click", function (e) {
-    if (e.target.classList.contains("light__overlay")) {
-      const { img } = e.target.dataset;
-      goToSlide(img);
-    }
-  });
+lightSmallBox.addEventListener("click", function (e) {
+  const clickedElement = e.target.closest(".light__img__box");
+
+  if (clickedElement) {
+    const { img } = clickedElement.querySelector(".light__overlay").dataset;
+
+    smallImages.forEach((box) => {
+      box.classList.remove("light__small__img-active");
+    });
+
+    clickedElement.classList.toggle("light__small__img-active");
+    goToSlide(img);
+  }
 });
 
 lightSmBox.forEach((light) => {
   light.addEventListener("click", function (e) {
-    if (e.target.classList.contains("light__overlay")) {
-      const { img } = e.target.dataset;
+    const clickedElement = e.target.closest(".light__img_box");
+
+    if (clickedElement) {
+      const { img } = clickedElement.querySelector(".light__overlay").dataset;
+
+      lightSmBox.forEach((box) => {
+        box.classList.remove("light__small__img-active");
+      });
+
+      clickedElement.classList.add("light__small__img-active");
       goToSlide3(img);
     }
   });
@@ -247,15 +257,19 @@ const prevSlide3 = function () {
   } else {
     curSlide3--;
   }
+
   goToSlide3(curSlide3);
 };
 
 btnRight.addEventListener("click", nextSlide2);
 btnLeft.addEventListener("click", prevSlide2);
-document.addEventListener("keydown", function (e) {
-  if (e.key === "ArrowLeft") prevSlide2(), prevSlide3();
-  if (e.key === "ArrowRight") nextSlide2(), nextSlide3();
-});
+// document.addEventListener("keydown", function (e) {
+//   if (e.key === "ArrowLeft")
+//     prevSlide2(), prevSlide3(), prevSlide();
+//   if (e.key === "ArrowRight")
+//     nextSlide2(), nextSlide3(), nextSlide();
+// });
+
 const closeLightBox = function () {
   lightBox.style.display = "none";
   overlay.style.display = "none";

@@ -539,9 +539,13 @@ body {
   display: flex;
   gap: 2.3rem;
 }
-.light__img__box {
+.light__img__box,
+.light__img_box {
   position: relative;
   cursor: pointer;
+}
+.light__img_box:hover .light__overlay {
+  opacity: 1;
 }
 .light__img__box:hover .light__overlay {
   opacity: 1;
@@ -572,10 +576,19 @@ body {
 .light__small__img-active {
   position: relative;
   border: 3px solid #ff7d1a;
+
   border-radius: 1.7rem;
 }
+.light__small__img-active .light__overlay {
+  background-color: #ffffff71;
+  opacity: 1;
+}
 
-.light__small__img-active::before {
+/* .light__small__img-active .light__overlay {
+  background-color: #ffffff56;
+} */
+
+/* .light__small__img-active::before {
   content: "";
   display: block;
   position: absolute;
@@ -586,7 +599,7 @@ body {
   background-color: #ffffff86;
   opacity: 1;
   border-radius: 1.5rem;
-}
+} */
 
 .box__overlay {
   position: fixed;
