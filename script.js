@@ -279,3 +279,4 @@ overlay.addEventListener("click", closeLightBox);
 closeIcon.addEventListener("click", closeLightBox);
 
 let SE;
+let d;
