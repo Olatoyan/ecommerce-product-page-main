@@ -277,4 +277,3 @@ const closeLightBox = function () {
 
 overlay.addEventListener("click", closeLightBox);
 closeIcon.addEventListener("click", closeLightBox);
-let q
