@@ -280,3 +280,4 @@ closeIcon.addEventListener("click", closeLightBox);
 
 let wew;
 let a;
+let as;
