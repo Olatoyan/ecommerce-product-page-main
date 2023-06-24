@@ -278,4 +278,5 @@ const closeLightBox = function () {
 overlay.addEventListener("click", closeLightBox);
 closeIcon.addEventListener("click", closeLightBox);
 
-let wew
+let wew;
+let a;
