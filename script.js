@@ -277,16 +277,3 @@ const closeLightBox = function () {
 
 overlay.addEventListener("click", closeLightBox);
 closeIcon.addEventListener("click", closeLightBox);
-
-const outerFunction = function () {
-  const outerVariable = "Hello";
-
-  return function innerFunction(name) {
-    console.log(outerVariable + name);
-  };
-  // return innerFunction;
-};
-
-outerFunction()("john");
-
-// inner();
